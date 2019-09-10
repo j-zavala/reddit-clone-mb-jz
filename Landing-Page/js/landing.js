@@ -1,37 +1,12 @@
-// To test that the js is hooked up with the document.
-console.log("hello");
+// Get the modal
+var modal = document.getElementById("id01");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 
 // // This is a formula similarily used for the Wheather App H.W., where we use the window.onload.
 // window.onload = function() {
