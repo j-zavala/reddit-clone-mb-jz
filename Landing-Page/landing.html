@@ -24,9 +24,13 @@
           id="search"
           placeholder="Find a recipe"
         />
-        <a href="./html/enter-form/enter.html"
-          ><button id="enter">Login/Sign Up</button></a
+        <!-- Button to open the modal login form -->
+        <button
+          id="enter"
+          onclick="document.getElementById('id01').style.display='block'"
         >
+          Sign Up
+        </button>
       </nav>
     </header>
     <div class="borderline"></div>
@@ -63,14 +67,69 @@
       </section>
     </main>
     <footer></footer>
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+      <span
+        onclick="document.getElementById('id01').style.display='none'"
+        class="close"
+        title="Close Modal"
+        >&times;</span
+      >
+
+      <!-- Modal Content -->
+      <form class="modal-content animate">
+
+
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input
+            type="text"
+            class="uname"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+
+          <label for ="email"><b>Email</b></label>
+          <input type="text"
+          class="email"
+          name="email"
+          placeholder="Enter Email">
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            class="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <button id="login" onclick="logIn()" type="submit">Login</button>
+          <!-- <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label> -->
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+          <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+        </div>
+      </form>
+    </div>
+
     <script src="./js/landing.js"></script>
   </body>
 </html>
-
-
-
-
-
 
 <!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
