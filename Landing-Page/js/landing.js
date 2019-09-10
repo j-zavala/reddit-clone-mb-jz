@@ -1,7 +1,7 @@
-// To test that the js is hooked up with the document.
-console.log("hello");
 
-
+function postData(event) {
+  event.preventDefault();
+}
 
 
 
