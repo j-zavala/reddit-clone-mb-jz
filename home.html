@@ -3,65 +3,52 @@
   <head>
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
   </head>
   <body>
- <header>
-<nav>
- <!-- Header -->
-<h1>The Best Thing Ever!</h1>
-  <!-- Search Bar -->
-  <input type="text" placeholder="Search..">
-    <!-- Open the Moda -->
-    <!-- Sign Up Button  -->
-        <div id="sign">
-        <button type="button" class="signup_button" name="Sign button">
-          Sign up</button>
-        </div>
-      <!-- Div containing the signup content -->
+    <header>
+      <nav>
+        <!-- Header -->
+        <h1>The Best Thing Ever!</h1>
+        <!-- Div containing the signup content -->
         <div class="signup_content">
-        <!-- Div containing the sign in content -->
-            <div class="signup">
-          <form onSubmit="postData(event)" class="signupForm">
-            <input type="text" class="email" placeholder="email" />
-            <input type="password" class="password" placeholder="password" />
-            <input type="text" class="username" placeholder="username" />
-            <input type="submit" value="Join!" />
-            <span class="close"></span>
-          </form>
-            </div>
+          <!-- Div containing the sign in content -->
+          <div class="signup">
+            <form onSubmit="postData(event)" class="signupForm">
+              <input type="text" class="email" placeholder="email" />
+              <input type="password" class="password" placeholder="password" />
+              <input type="text" class="username" placeholder="username" />
+              <input type="submit" value="Join!" />
+              <span class="close"></span>
+            </form>
+          </div>
         </div>
-        <!-- Contains the log in button -->
-        <div id="log">
-      <button type="button" name="button">Log In</button>
+        <!-- Div containts the log in content -->
+        <div class="login_content">
+          <div class="login">
+            <form class="signupForm" id="loginForm">
+              <!-- Log in requires email and password from the schema -->
+              <input type="text" class="email" placeholder="email" />
+              <input type="password" class="password" placeholder="password" />
+              <input type="submit" value="Start Sharing" />
+              <span class="close"></span>
+            </form>
+          </div>
         </div>
-      <!-- Div containts the log in content -->
-      <div class="login_content">
-        <div class="login">
-    <form class="signupForm" id="loginForm">
-      <!-- Log in requires email and password from the schema -->
-      <input type="text" class="email" placeholder="email" />
-      <input type="password" class="password" placeholder="password" />
-      <input type ="submit" value="Start Sharing" />
-      <span class="close"></span>
-    </form>
+        <!-- Sign Out Button -->
+        <div id="close">
+          <button type="button" name="button">Sign Out</button>
         </div>
-      </div>
-      <!-- Sign Out Button -->
-      <div id="close">
-      <button type="button" name="button">Sign Out</button>
-
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
     <main>
-        <div class="posts">
+      <div class="posts">
         <!-- The Post Creater -->
         <form onsubmit="createPost(event)" class="postForm">
-            <input type="text" class="title" placeholder="title" />
-            <input type="text" class="description" placeholder="description" />
-            <input type="submit" />
+          <input type="text" class="title" placeholder="title" />
+          <input type="text" class="description" placeholder="description" />
+          <input type="submit" />
         </form>
         <!-- The -->
         <form class="" action="createComment(event)" method="postForm">
@@ -75,8 +62,7 @@
       </div>
     </main>
 
-<footer> Jonny and Neil Inc</footer>
+    <footer>Jonny and Neil Inc</footer>
     <script src="js/home.js"></script>
-
   </body>
 </html>

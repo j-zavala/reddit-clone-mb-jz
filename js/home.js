@@ -30,8 +30,8 @@ function postData(event) {
 function logUserIn() {
   let token = localStorage.getItem("user");
   if (token) {
-    let stuff = document.querySelector(".signup_content");
-    console.log(stuff);
+    document.querySelector(".signupForm").style.display = "none";
+    document.querySelector(".postForm").style.display = "block";
   } else if (token === null) {
     console.log("error");
   }
