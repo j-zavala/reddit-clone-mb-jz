@@ -33,8 +33,7 @@
 
     <button
     id="resume"
-    onclick="document.getElementById('').style.display='block'"
-    >
+    onclick="document.getElementById('id02').style.display='block'">
       Log In
     </button>
 
@@ -99,14 +98,14 @@
       <form class="modal-content animate">
 <!-- The username required -->
       <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input
-          type="text"
-          class="uname"
-          placeholder="Enter Username"
-          name="uname"
-          required
-        />
+
+        <label for ="email"><b>Email</b></label>
+        <input type="text"
+        class="email"
+        name="email"
+        placeholder="Enter Email"/>
+
+        
 <!-- The password required -->
         <label for="psw"><b>Password</b></label>
         <input
@@ -118,7 +117,7 @@
         />
 
         <!-- <button id="Resume" onClick=""="newUser(event)" type="submit">Join</button> -->
-        <button id="Ready" onClick=""="login(event)" type="submit">Start Cooking</button>
+        <button id="Ready" type="submit">Start Cooking</button>
         <label>
           <input type="checkbox" checked="checked" name="remember" /> Remember
           me
@@ -164,7 +163,7 @@
           <input type="text"
           class="email"
           name="email"
-          placeholder="Enter Email">
+          placeholder="Enter Email"/>
 
           <label for="psw"><b>Password</b></label>
           <input

@@ -24,9 +24,6 @@ function newUser(event){
 // the formula used for the signup function to get the user log in credentials.
 function postData(event){
   event.preventDefault();
-    const email = document.getElementsByClassName('email');
-    const password = document.getElementsByClassName('password');
-    const username = document.getElementsByClassName('uname');
 
     fetch('http://thesi.generalassemb.ly:8080/signup', {
           method: 'POST',
@@ -54,6 +51,48 @@ function postData(event){
 
 
 
+// Formula for making the log in function.
+function logIn(event) {
+  event.preventDefault();
+
+  fetch('http://thesi.generalassemb.ly:8080/login', {
+    method: 'POST' ,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      email: email.value,
+      password: password.value
+
+    })
+    .then((res) => {
+        return res.json();
+    })
+    .then((res) => {
+        localStorage.setItem('user', res.token);
+        // createPost();
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+  })
+
+};
+
+// Global Variables that will come in handy for later functions
+const email = document.getElementsByClassName('email');
+const password = document.getElementsByClassName('password');
+const username = document.getElementsByClassName('uname');
+
+
+function Resume(event){
+  // Stop the page from reshing.
+  event.preventDefault()
+  email.value;
+  password.value;
+  window.location.href = "home.html";
+  document.getElementById('Ready').addEventListener('click', )
+}
 
 
 
