@@ -62,11 +62,44 @@ button {
   /* display: none; */
 
 }
-
+/* Here we are making the post go towards the
+ center via the margins */
+ /* We are also using some padding to put some
+ space between our current item and the content box*/
 .postForm {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin-left: 25%;
   margin-right: 25%;
+  padding-bottom: 40px;
+}
+
+.title {
+  margin-right: 75%;
+  }
+
+.description {
+  padding-bottom: 25%;
+}
+
+/* input  {
+  margin-left: 75%;
+} */
+
+.post_it {
+  margin-left: 75%;
+}
+
+.comment {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
 }

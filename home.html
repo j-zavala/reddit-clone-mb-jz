@@ -7,10 +7,10 @@
   </head>
   <body>
     <header>
+      <h1>The Best Thing Ever!</h1>
       <nav>
         <!-- Header -->
-        <h1>The Best Thing Ever!</h1>
-        <!-- Div containing the signup content -->
+
         <div class="signup_content">
           <!-- Div containing the sign in content -->
           <div class="signup">
@@ -48,13 +48,14 @@
         <form onsubmit="createPost(event)" class="postForm">
           <input type="text" class="title" placeholder="title" />
           <input type="text" class="description" placeholder="description" />
-          <input type="submit" />
+          <input type="submit" class="post_it" value="post" />
+          <p class="userName"></p>
         </form>
         <!-- The -->
-        <form class="" action="createComment(event)" method="postForm">
-            <input type="text" placeholder="comment">
-            <input type="submit" />
-            <p id="userName"></p>
+        <form class="comment" action="createComment(event)" method="postForm">
+            <input type="text" class="description" placeholder="comment">
+            <input type="submit" class="post_it" value="comment" />
+            <p class="userName"></p>
         </form>
         </div>
         <div>
