@@ -2,11 +2,61 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Homepage</title>
   </head>
   <body>
-    <p>Hi</p>
+    <header>
+      <nav>
+<!-- Our logo in our nav -->
+        <img
+          id="logo"
+          src="../img/full-logo.svg"
+          alt="logo with text"
+          srcset=""
+          />
+<!-- Our search bar -->
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Find a recipe"
+        />
+      <!-- Log Out Button -->
+        <button type="button"
+          id="logOut"
+          name="button">
+          Log Out
+      </button>
+    </nav>
+  </header>
+  <!-- Our main contains the posts  -->
+<main>
+  <div>
+      <form class="post" action="Homepage.html" method="post">
+        <div>
+          <label for ="Create Post">Create Post</label>
+          <textarea type="text"></textarea>
+          <input type ="submit" class="name" name="submit post">
+        </div>
+      </form>
+        <div>
+          <label for="comments">Comments:</label>
+          <textarea type="text" class="comments" name="comments">
+          </textarea>
+          <input type="submit" name="Post Comments" value="submit">
+        </div>
+      </form>
+    </div>
 
+
+
+
+
+
+
+  </main>
 
   </body>
+
+
 </html>

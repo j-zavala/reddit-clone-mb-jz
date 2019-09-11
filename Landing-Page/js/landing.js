@@ -7,32 +7,28 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 };
-
-function logIn(event){
-let passValue = document.getElementsByClassName('password').value;
-let emailValue = document.getElementsByClassName('email').value;
-let userValue = document.getElementsByClassName('uname').value;
-event.preventDefault();
-
-  if(document.getElementsByClassName('password') === passValue &&
-document.getElementsByClassName('email') === emailValue &&
-document.getElementsByClassName('uname') === userValue) {
-
-window.location.href = "/Users/neilbipat/Desktop/GA-PROJECTS/Project-1/reddit-clone-mb-jz/Landing-Page/html/Homepage.html";
+// Create a log in function that needs a email, password, and user submit so that
+// way you can't just press the click button and go in.
+function newUser(event){
+  let passValue = document.getElementsByClassName('password').value;
+  let emailValue = document.getElementsByClassName('email').value;
+  let userValue = document.getElementsByClassName('uname').value;
+// Used to stop the page from refreshing.
+    event.preventDefault();
+// When you click the submit button and it goes to our home page.
+    window.location.href = "./Homepage.html";
 }
-
-}
-
 
 
 // a formula similarily used for the Wheather App H.W., where we use the window.onload.
+// the formula used for the signup function to get the user log in credentials.
 function postData(event){
   event.preventDefault();
-  const email = document.getElementsByClassName('email');
-  const password = document.getElementsByClassName('password');
-  const username = document.getElementsByClassName('uname');
+    const email = document.getElementsByClassName('email');
+    const password = document.getElementsByClassName('password');
+    const username = document.getElementsByClassName('uname');
 
-  fetch('http://thesi.generalassemb.ly:8080/signup', {
+    fetch('http://thesi.generalassemb.ly:8080/signup', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -49,12 +45,17 @@ function postData(event){
     })
     .then((res) => {
         localStorage.setItem('user', res.token);
-        // createPost();
+        createPost();
     })
     .catch((err) => {
         console.log(err);
     })
-}
+};
+
+
+
+
+
 
 
 

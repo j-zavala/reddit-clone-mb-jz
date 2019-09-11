@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Food It</title>
-    <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/landing.css" />
+    <link rel="shortcut icon" href="../img/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/landing.css" />
   </head>
   <body>
     <header>
       <nav>
         <img
           id="logo"
-          src="./img/full-logo.svg"
+          src="../img/full-logo.svg"
           alt="logo with text"
           srcset=""
         />
@@ -24,20 +24,11 @@
           id="search"
           placeholder="Find a recipe"
         />
-        <!-- Button to open the modal login form -->
+        <!-- Button to open the modal  form -->
         <button
           id="enter"
           onclick="document.getElementById('id01').style.display='block'"
         >
-<<<<<<< HEAD
-=======
-          Login
-        </button>
-        <button
-          id="enter"
-          onclick="document.getElementById('id01').style.display='block'"
-        >
->>>>>>> 56e21974c40cde468dbcd4eec53f813a5f17badf
           Sign Up
         </button>
       </nav>
@@ -47,10 +38,10 @@
       <section class="recipesOfTheDay">
         <h1 class="title1">Recipes of the Day</h1>
         <div class="imgs-wrapper">
-          <img src="./img/pasta.jpg" alt="" class="cardTopRecipe" />
-          <img src="./img/pasta.jpg" alt="" class="cardTopRecipe" />
-          <img src="./img/pasta.jpg" alt="" class="cardTopRecipe" />
-          <img src="./img/pasta.jpg" alt="" class="cardTopRecipe" />
+          <img src="../img/pasta.jpg" alt="" class="cardTopRecipe" />
+          <img src="../img/pasta.jpg" alt="" class="cardTopRecipe" />
+          <img src="../img/pasta.jpg" alt="" class="cardTopRecipe" />
+          <img src="../img/pasta.jpg" alt="" class="cardTopRecipe" />
         </div>
       </section>
       <section class="popularPosts">
@@ -59,7 +50,7 @@
           <figure>
             <div class="img-box">
               <img
-                src="./img/ramen.jpg"
+                src="../img/ramen.jpg"
                 alt="popular post image"
                 class="cardPopular"
               />
@@ -85,10 +76,9 @@
         title="Close Modal"
         >&times;</span
       >
-<<<<<<< HEAD
 
       <!-- Modal Content -->
-      <form class="modal-content animate">
+      <form class="modal-content animate" onSubmit = "newUser(event)">
 
 
 
@@ -117,11 +107,11 @@
             required
           />
 
-          <button id="login" onclick="logIn()" type="submit">Login</button>
-          <!-- <label>
+          <button id="submit" onClick=""="login(event)" type="submit">Join</button>
+          <label>
             <input type="checkbox" checked="checked" name="remember" /> Remember
             me
-          </label> -->
+          </label>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
@@ -133,59 +123,11 @@
             Cancel
           </button>
           <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
-=======
-      <div class="columns">
-        <div class="columnLeft">
-          <div class="Art"></div>
         </div>
-        <div class="columnRight">
-          <!-- Modal Content -->
-          <form class="modal-content animate" action="/action_page.php">
-            <div class="imgcontainer">
-              <img src="./img/full-logo.svg" alt="Avatar" class="avatar" />
-            </div>
-
-            <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input
-                type="text"
-                placeholder="Enter Username"
-                name="uname"
-                required
-              />
-
-              <label for="psw"><b>Password</b></label>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                name="psw"
-                required
-              />
-
-              <button type="submit">Login</button>
-              <!-- <label>
-                <input type="checkbox" checked="checked" name="remember" />
-                Remember me
-              </label> -->
-            </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-              <button
-                type="button"
-                onclick="document.getElementById('id01').style.display='none'"
-                class="cancelbtn"
-              >
-                Cancel
-              </button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-          </form>
->>>>>>> 56e21974c40cde468dbcd4eec53f813a5f17badf
-        </div>
-      </div>
+      </form>
     </div>
 
-    <script src="./js/landing.js"></script>
+    <script src="../js/landing.js"></script>
   </body>
 </html>
 
