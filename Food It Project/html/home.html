@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Homepage</title>
+      <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+<!-- Our logo in our nav -->
+        <img
+          id="logo"
+          src="../img/full-logo.svg"
+          alt="logo with text"
+          srcset=""
+          />
+<!-- Our search bar -->
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Find a recipe"
+        />
+      <!-- Log Out Button -->
+        <button type="button"
+          id="logOut"
+          name="button">
+          Log Out
+      </button>
+    </nav>
+  <!-- Here will change the color to red in css. -->
+    <div class="borderline">
+    </div>
+  </header>
+  <!-- Our main contains the posts  -->
+<main>
+<!--Contain a div that has post_container -->
+  <div class = "post_container">
+<!--This form is for making posts  -->
+      <form class="post" action="Homepage.html" method="post">
+        <div>
+  <!-- This is for creating Posts -->
+          <label for ="Create Post" placeholder""></label>
+  <!-- Text area for writing -->
+          <textarea type="text" placeholder="Create Post:"></textarea>
+  <!-- Input type is submit as it automatically creates a button -->
+          <input type ="submit" class="submit" name="submit post">
+        </div>
+  <!-- This form is for commenting posts -->
+      </form>
+        <div>
+          <label for="comments"></label>
+    <!-- Text area for writing  -->
+          <textarea type="text" placeholder="Comments"></textarea>
+    <!-- Input type is submit as it automatically creates a button -->
+          <input type="submit" class="submit" name="Post Comments" value="submit">
+        </div>
+      </form>
+    </div>
+  </main>
+  </body>
+</html>
