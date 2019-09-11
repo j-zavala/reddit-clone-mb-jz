@@ -64,7 +64,7 @@ input:focus {
 /* Search Bar */
 
 /* Button */
-button#enter {
+button#enter , button#resume {
   /* White Base */
   background: #ffffff;
   /* Shadow Blue · 4dp */

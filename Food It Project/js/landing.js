@@ -16,7 +16,7 @@ function newUser(event){
 // Used to stop the page from refreshing.
     event.preventDefault();
 // When you click the submit button and it goes to our home page.
-    window.location.href = "./Homepage.html";
+    window.location.href = "home.html";
 }
 
 
@@ -45,12 +45,13 @@ function postData(event){
     })
     .then((res) => {
         localStorage.setItem('user', res.token);
-        createPost();
+        // createPost();
     })
     .catch((err) => {
         console.log(err);
     })
 };
+
 
 
 

@@ -16,8 +16,7 @@
           id="logo"
           src="../img/full-logo.svg"
           alt="logo with text"
-          srcset=""
-        />
+          srcset=<""/>
         <input
           type="search"
           name="search"
@@ -31,6 +30,15 @@
         >
           Sign Up
         </button>
+
+    <button
+    id="resume"
+    onclick="document.getElementById('').style.display='block'"
+    >
+      Log In
+    </button>
+
+
       </nav>
     </header>
     <div class="borderline"></div>
@@ -69,6 +77,67 @@
     <footer></footer>
 
     <!-- The Modal -->
+    <!-- <div id ="" class="modal">
+      <span
+        onclick="document.getElementById('').style.display='none'"
+        class="close"
+        title="Close Modal"
+        >&times;</span
+      >
+    </div> -->
+
+<!-- Modal Content -->
+<!-- Log in Button -->
+    <div id ="id02" class="modal">
+<!-- Use a modal to make username and email pop up -->
+      <span
+        onclick="document.getElementById('id02').style.display='none'"
+        class="close"
+        title="Close Modal"
+        >&times;</span
+      >
+      <form class="modal-content animate">
+<!-- The username required -->
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input
+          type="text"
+          class="uname"
+          placeholder="Enter Username"
+          name="uname"
+          required
+        />
+<!-- The password required -->
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          class="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+
+        <!-- <button id="Resume" onClick=""="newUser(event)" type="submit">Join</button> -->
+        <button id="Ready" onClick=""="login(event)" type="submit">Start Cooking</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+
+<!-- Sign in button -->
     <div id="id01" class="modal">
       <span
         onclick="document.getElementById('id01').style.display='none'"
@@ -77,10 +146,9 @@
         >&times;</span
       >
 
-      <!-- Modal Content -->
+
       <form class="modal-content animate" onSubmit = "newUser(event)">
-
-
+        <!-- Creating a log in button -->
 
         <div class="container">
           <label for="uname"><b>Username</b></label>
@@ -107,7 +175,7 @@
             required
           />
 
-          <button id="submit" onClick=""="login(event)" type="submit">Join</button>
+          <button id="submit" onClick=""="newUser(event)" type="submit">Join</button>
           <label>
             <input type="checkbox" checked="checked" name="remember" /> Remember
             me
