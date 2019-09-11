@@ -56,6 +56,17 @@ button {
 }
 
 .posts {
-  display: none;
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+  /* display: none; */
 
+}
+
+.postForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 25%;
+  margin-right: 25%;
 }
