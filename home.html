@@ -6,52 +6,52 @@
     <link rel="stylesheet" type="text/css" href="css/home.css">
   </head>
   <body>
-<<<<<<< HEAD
-    <form onsubmit="postData(event)" class="signupForm">
-=======
-    <header>
-  <nav>
-    <!-- Header -->
-  <h1>The Best Thing Ever!</h1>
+ HEAD
+ <header>
+<nav>
+ <!-- Header -->
+<h1>The Best Thing Ever!</h1>
   <!-- Search Bar -->
   <input type="text" placeholder="Search..">
     <!-- Open the Moda -->
     <!-- Sign Up Button  -->
+        <div id="sign">
         <button type="button" class="signup_button" name="Sign button">
           Sign up</button>
+        </div>
       <!-- Div containing the signup content -->
         <div class="signup_content">
         <!-- Div containing the sign in content -->
+            <div class="signup">
           <form onSubmit="postData(event)" class="signupForm">
             <input type="text" class="email" placeholder="email" />
             <input type="password" class="password" placeholder="password" />
             <input type="text" class="username" placeholder="username" />
             <input type="submit" value="Join!" />
+            <span class="close"></span>
           </form>
+            </div>
         </div>
         <!-- Contains the log in button -->
+        <div id="log">
       <button type="button" name="button">Log In</button>
+        </div>
       <!-- Div containts the log in content -->
       <div class="login_content">
+        <div class="login">
     <form class="signupForm" id="loginForm">
       <!-- Log in requires email and password from the schema -->
->>>>>>> e076686e54e5dfe528237df86c312f1b7a5e5fb9
       <input type="text" class="email" placeholder="email" />
       <input type="password" class="password" placeholder="password" />
       <input type ="submit" value="Start Sharing" />
+      <span class="close"></span>
     </form>
-<<<<<<< HEAD
-    <form onsubmit="createPost(event)" class="postForm">
-      <input type="text" class="title" placeholder="title" />
-      <input type="text" class="description" placeholder="description" />
-      <input type="submit" />
-    </form>
-    <ul class="posts"></ul>
-    <script src="./js/home.js"></script>
-=======
+        </div>
       </div>
       <!-- Sign Out Button -->
+      <div id="close">
       <button type="button" name="button">Sign Out</button>
+
       </div>
     </nav>
   </header>
@@ -76,6 +76,6 @@
 
 <footer> Jonny and Neil Inc</footer>
     <script src="js/home.js"></script>
->>>>>>> e076686e54e5dfe528237df86c312f1b7a5e5fb9
+
   </body>
 </html>
