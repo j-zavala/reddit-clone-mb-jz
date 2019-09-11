@@ -10,7 +10,19 @@ body {
   flex-direction: column;
   text-align: center;
   padding-top: 50px;
+  border: 2px solid black;
+  margin-top: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
+  padding-bottom: 800px;
 }
+
+  textarea {
+	min-height: 5em;
+	max-height: 50vh;
+	width: 80%;
+}
+
 
 
 nav {
