@@ -21,17 +21,19 @@ function postData(event) {
     })
     .then(res => {
       localStorage.setItem("user", res.token);
-      logUserIn();
+      signupUser();
     })
     .catch(err => {
       console.log(err);
     });
 }
 
-function logUserIn() {
+function signupUser() {
   let token = localStorage.getItem("user");
   if (token) {
-    document.querySelector(".signupForm").style.display = "none";
+    // document.querySelector(".signupForm").style.display = "none";
+    // document.querySelector(".loginForm").style.display = "none";
+    document.querySelector(".accountOptions").style.display = "none";
     document.querySelector(".postForm").style.display = "flex";
     document.querySelector(".commentForm").style.display = "flex";
     createPost();
@@ -39,6 +41,18 @@ function logUserIn() {
     console.log("error");
   }
 }
+
+// function logUserIn() {
+//   let token = localStorage.getItem("user");
+//   if (token) {
+//     document.querySelector(".signupForm").style.display = "none";
+//     document.querySelector(".postForm").style.display = "flex";
+//     document.querySelector(".commentForm").style.display = "flex";
+//     createPost();
+//   } else if (token === null) {
+//     console.log("error");
+//   }
+// }
 
 // function updateDom() {
 //   document.querySelector(".signupForm").style.display = "none";
