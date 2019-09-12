@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>B.T.T.H.T.</title>
+    <link rel="stylesheet" href="./css/home.css" />
+    <link
+      rel="stylesheet"
+      href="http://www.cnap.graphismeenfrance.fr/faune/styles/faune-fontes.css"
+    />
+  </head>
+  <body>
+    <header class="container">
+      <nav class="navbar">
+        <h1 class="logo-text">Best Thing That Happened Today</h1>
+        <h2 class="tagline">A place to share the highlights of your day</h2>
+        <section class="accountOptions">
+          <!-- Div containing the sign in content -->
+          <div class="signupContent">
+            <div class="signup">
+              <form class="signupForm" onsubmit="postData(event)">
+                <div class="group">
+                  <input type="text" class="email" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Email</label>
+                </div>
+                <div class="group">
+                  <input type="text" class="username" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Username</label>
+                </div>
+
+                <div class="group">
+                  <input type="password" class="password" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Password</label>
+                </div>
+                <button type="submit" class="submit input">Sign up</button>
+                <span class="close"></span>
+              </form>
+            </div>
+          </div>
+          <!-- Div containts the log in content -->
+          <div class="loginContent">
+            <div class="login">
+              <form class="loginForm">
+                <!-- Log in requires email and password from the schema -->
+                <div class="group">
+                  <input type="text" class="username input" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Username</label>
+                </div>
+                <div class="group">
+                  <input type="password" class="password" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Password</label>
+                </div>
+                <button type="submit" class="submit input">Log in</button>
+
+                <span class="close"></span>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- Sign Out Button -->
+        <div class="signOut">
+          <button type="button" name="button">Sign Out</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="content">
+      <div class="posts">
+        <!-- The Post Creater -->
+        <form class="postForm">
+          <input type="text" class="title" placeholder="title" />
+          <input type="text" class="description" placeholder="description" />
+          <input type="submit" class="postIt" value="post" />
+          <p class="userName"></p>
+        </form>
+        <form
+          class="commentForm"
+          action="createComment(event)"
+          method="postForm"
+        >
+          <input type="text" class="description" placeholder="comment" />
+          <input type="submit" class="postIt" value="comment" />
+          <p class="userName"></p>
+        </form>
+      </div>
+      <div class="postsSection">
+        <ul class="postsBox"></ul>
+      </div>
+    </main>
+
+    <footer>Johnny and Neil Inc</footer>
+    <script src="./js/home.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
