@@ -1,3 +1,4 @@
+
 // Send data to database to get token.
 function postData(event) {
   event.preventDefault();
@@ -35,6 +36,9 @@ function signupUser() {
     document.querySelector(".accountOptions").style.display = "none";
     document.querySelector(".postForm").style.display = "flex";
     document.querySelector(".commentForm").style.display = "flex";
+    createPost();
+  } else if (token === null) {
+    console.log("error");
   }
 }
 
