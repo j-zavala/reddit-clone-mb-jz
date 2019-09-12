@@ -20,7 +20,7 @@
           <!-- Div containing the sign in content -->
           <div class="signupContent">
             <div class="signup">
-              <form class="signupForm" onsubmit="postData(event)">
+              <form class="signupForm">
                 <div class="group">
                   <input type="text" class="email" />
                   <span class="highlight"></span>
@@ -40,7 +40,9 @@
                   <span class="bar"></span>
                   <label>Password</label>
                 </div>
-                <button type="submit" class="submit input">Sign up</button>
+                <button type="submit" class="submit signupButton">
+                  Sign up
+                </button>
                 <span class="close"></span>
               </form>
             </div>
@@ -51,13 +53,13 @@
               <form class="loginForm" onsubmit="logUserIn(event)">
                 <!-- Log in requires email and password from the schema -->
                 <div class="group">
-                  <input type="text" class="username input" />
+                  <input type="text" id="emailInput" />
                   <span class="highlight"></span>
                   <span class="bar"></span>
-                  <label>Username</label>
+                  <label>Email</label>
                 </div>
                 <div class="group">
-                  <input type="password" class="password" />
+                  <input type="password" id="passwordInput" />
                   <span class="highlight"></span>
                   <span class="bar"></span>
                   <label>Password</label>
@@ -82,16 +84,16 @@
         <form class="postForm">
           <input type="text" class="title" placeholder="title" />
           <input type="text" class="description" placeholder="description" />
-          <input type="submit" class="postIt" value="post" />
+          <button type="submit" class="submit input postIt postButton">
+            Post
+          </button>
           <p class="userName"></p>
         </form>
-        <form
-          class="commentForm"
-          action="createComment(event)"
-          method="postForm"
-        >
+        <form class="commentForm" method="postForm">
           <input type="text" class="description" placeholder="comment" />
-          <input type="submit" class="postIt" value="comment" />
+          <button type="submit" class="submit input postIt commentButton">
+            Comment
+          </button>
           <p class="userName"></p>
         </form>
       </div>
