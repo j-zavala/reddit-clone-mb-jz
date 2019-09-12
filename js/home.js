@@ -4,6 +4,7 @@ function postData(event) {
   const email = document.querySelector(".email");
   const password = document.querySelector(".password");
   const username = document.querySelector(".username");
+  console.log(email.value, password.value, username.value);
   fetch("http://thesi.generalassemb.ly:8080/signup", {
     method: "POST",
     headers: {
