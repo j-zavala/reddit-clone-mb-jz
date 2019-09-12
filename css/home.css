@@ -1,105 +1,233 @@
-body {
-  background-color: #8080ff;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
+* {
+  box-sizing: border-box;
+}
 
+body {
+  height: 100%;
+  margin: 20px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo-text {
+  font-family: "Faune", sans-serif;
+  font-size: 40px;
 }
 
 nav {
-  /* display: flex; */
-  justify-content: space-between;
-  padding-bottom: 30px;
-  display: flex;
+  background-color: #f9f59b;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #888;
+  border: 1px solid #e2e2e2;
+  max-width: 800px;
+  height: 600px;
+  margin-top: 100px;
 }
 
-/* .signup_content , .login_content  {
-  display: none;
-  position: fixed;
-  z-index: 1; /
-  left: 0;
-  top: 0;
-  width: 100%;
+.accountOptions {
+  display: flex;
   height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
-} */
-/* COULD BE AN ISSUE JUST BE AWARE!!! FOR THE MODA!!!! */
-/* .login , .signup {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-} */
-/* COULD BE AN ISSUE FOR MODA!!!!! */
-/* .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-} */
-/* COULD BE AN ISSUE FOR MODA! */
-/* .close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
+  align-items: center;
+}
+
+div.signOut {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 25px;
+}
+
+button {
+  /* White Base */
+
+  background: #ffffff;
+  /* Shadow Blue · 4dp */
+
+  box-shadow: 0px 2px 4px rgba(54, 123, 245, 0.24),
+    0px 4px 8px rgba(54, 123, 245, 0.16);
+  border-radius: 99px;
   cursor: pointer;
-} */
+}
+
+button:focus,
+input:focus {
+  outline: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tagline {
+  color: #888;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-right: 1px solid gray;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Input Fields */
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264ae;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264ae;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  background-color: #f9f59b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 button {
   justify-content: flex-end;
   width: 100px;
   height: 50px;
-  margin-right:50px;
-}
-
-.posts {
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
-  /* display: none; */
-
-}
-/* Here we are making the post go towards the
- center via the margins */
- /* We are also using some padding to put some
- space between our current item and the content box*/
-.postForm {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-left: 25%;
-  margin-right: 25%;
-  padding-bottom: 40px;
-}
-
-.title {
-  margin-right: 75%;
-  }
-
-.description {
-  padding-bottom: 25%;
-}
-
-/* input  {
-  margin-left: 75%;
-} */
-
-.post_it {
-  margin-left: 75%;
-}
-
-.comment {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-left: 25%;
-  margin-right: 25%;
-  padding: 20px;
+  margin-right: 50px;
 }
 
 footer {
   text-align: center;
+}
+
+.postForm {
+  display: flex;
+  flex-direction: column;
 }
