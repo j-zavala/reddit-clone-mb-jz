@@ -214,6 +214,7 @@ input:focus ~ .highlight {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 button {
@@ -230,4 +231,23 @@ footer {
 .postForm {
   display: flex;
   flex-direction: column;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+}
+
+button.postIt {
+  text-align: center;
+}
+
+.postForm {
+  display: flex;
+  align-items: center;
+}
+
+.commentForm {
+  display: flex;
+  align-items: center;
 }
