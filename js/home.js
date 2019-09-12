@@ -31,7 +31,35 @@ function logUserIn() {
   let token = localStorage.getItem("user");
   if (token) {
     document.querySelector(".signupForm").style.display = "none";
-    document.querySelector(".postForm").style.display = "block";
+    document.querySelector(".postForm").style.display = "flex";
+    document.querySelector(".commentForm").style.display = "flex";
+
+    fetch("http://thesi.generalassemb.ly:8080/user/post", {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("user")
+      }
+    })
+      .then(res => {
+        return res.json();
+      })
+      .then(res => {
+        console.log(res);
+        //         const list = document.querySelector('.posts');
+        // ​
+        //         for (let i = 0; i < res.length; i++) {
+        //             const item = document.createElement('li');
+        //             const title = document.createElement('h3');
+        //             const description = document.createElement('p');
+        //             item.appendChild(title);
+        //             item.appendChild(description);
+        //             title.innerText = res[i].title;
+        //             description.innerText = res[i].description;
+        //             list.appendChild(item);
+        //         }
+      })
+      .catch(err => {
+        console.log(err);
+      });
   } else if (token === null) {
     console.log("error");
   }
