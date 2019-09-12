@@ -28,16 +28,7 @@ function postData(event) {
       console.log(err);
     });
 }
-// function signupUser() {
-//   let token = localStorage.getItem("user");
-//   if (token) {
-//     document.querySelector(".signupForm").style.display = "none";
-//     document.querySelector(".loginForm").style.display = "none";
-//     document.querySelector(".accountOptions").style.display = "none";
-//     document.querySelector(".postForm").style.display = "flex";
-//     document.querySelector(".commentForm").style.display = "flex";
-//   }
-// }
+
 function logUserIn(event) {
   event.preventDefault();
   let token = localStorage.getItem("user");
@@ -74,25 +65,14 @@ function logUserIn(event) {
     console.log("error");
   }
 }
-function logOut() {
+function logOut(event) {
   window.location.reload();
-  localStorage.setItem("user", null);
+  localStorage.clear();
 }
-//         const list = document.querySelector('.posts');
-//         // ​
-//         //         for (let i = 0; i < res.length; i++) {
-//         //             const item = document.createElement('li');
-//         //             const title = document.createElement('h3');
-//         //             const description = document.createElement('p');
-//         //             item.appendChild(title);
-//         //             item.appendChild(description);
-//         //             title.innerText = res[i].title;
-//         //             description.innerText = res[i].description;
-//         //             list.appendChild(item);
-//         //         }
+
 function updateDom() {
-  document.querySelector(".signupForm").style.display = "none";
-  document.querySelector(".postForm").style.display = "block";
+  // document.querySelector(".signupForm").style.display = "none";
+  // document.querySelector(".postForm").style.display = "block";
   fetch("http://thesi.generalassemb.ly:8080/user/post", {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("user")
@@ -140,15 +120,50 @@ function postCreator() {
     })
     .then(res => {
       console.log(res);
+      updateDom(res);
     })
     .catch(err => {
       console.log(err);
     });
 }
-// function createPost(event){
-//   event.preventDefault();
-//   const title = document.getElementsByClassName('title');
-//   const description = document.getElementsByClassName('description');
-//
-//   fetch("")
-//
+
+// function updateDom(res) {
+//   const list = document.querySelector(".posts");
+//   for (let i = 0; i < res.length; i++) {
+//     const item = document.createElement("li");
+//     const title = document.createElement("h3");
+//     const description = document.createElement("p");
+//     item.appendChild(title);
+//     item.appendChild(description);
+//     title.innerText = res[i].title;
+//     description.innerText = res[i].description;
+//     list.appendChild(item);
+//   }
+// }
+
+//         const list = document.querySelector('.posts');
+//         // ​
+//         //         for (let i = 0; i < res.length; i++) {
+//         //             const item = document.createElement('li');
+//         //             const title = document.createElement('h3');
+//         //             const description = document.createElement('p');
+//         //             item.appendChild(title);
+//         //             item.appendChild(description);
+//         //             title.innerText = res[i].title;
+//         //             description.innerText = res[i].description;
+//         //             list.appendChild(item);
+//         //         }
+
+// function updateDom(res) {
+//   const list = document.querySelector(".posts");
+//   for (let i = 0; i < res.length; i++) {
+//     const item = document.createElement("li");
+//     const title = document.createElement("h3");
+//     const description = document.createElement("p");
+//     item.appendChild(title);
+//     item.appendChild(description);
+//     title.innerText = res[i].title;
+//     description.innerText = res[i].description;
+//     list.appendChild(item);
+//   }
+// }

@@ -75,16 +75,18 @@
             </div>
           </div>
         </section>
-        <!-- Sign Out Button -->
-        <div class="signOut">
-          <button type="button" name="button">Sign Out</button>
-        </div>
       </nav>
     </header>
 
     <main class="content">
       <div class="posts">
         <!-- The Post Creater -->
+        <!-- Sign Out Button -->
+        <div class="signOut">
+          <button type="button" name="button" onclick="logOut(event)">
+            Sign Out
+          </button>
+        </div>
         <form class="postForm">
           <input type="text" class="title" placeholder="title" />
           <input type="text" class="description" placeholder="description" />
