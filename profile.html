@@ -7,14 +7,30 @@
       href="css/profile.css"/>
   </head>
   <body>
-    <header>Your Best Profile Ever!</header>
+    <header>Your Awesome Profile!</header>
     <nav>
       <!--Nav panel for the profile -->
-      <button type="button" name="button">Home</button>
+      <button id="home" type="button" name="button">Home</button>
       <button type="button" name="button">Sign Out</button>
     </nav>
+
       <main>
+        <!-- Used to create the profile statemtn and a letter wrapper -->
+
+    <div class="info_container">
+
+      <form class="user_profile_info" action="index.html" method="post">
+        <input id="user" type="text" name="username" placeholder="Your Name">
+        <input type="text" name="email" placeholder="Your Email">
+        <input type="password"  placeholder="Your Password">
+        <input type="submit" value="Update your Awesome Profile?">
+      </form>
+
       <img src="https://api.adorable.io/avatars/285/abott@adorable.png" alt="">
+
+      </div>
+
+      <div class ="profile">
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing
         elit, sed do eiusmod tempor incididunt ut labore et
         dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -22,7 +38,36 @@
         ex ea commodo consequat. Duis aute irure dolor in
         reprehenderit in voluptate velit esse cillum dolore
         eu fugiat nulla pariatur. Excepteur sint occaecat."</p>
+
+
+          </div>
+
+          <div class="posts">
+            <!-- The Post Creater -->
+            <form onsubmit="createPost(event)" class="postForm">
+              <input type="text" class="title" placeholder="title" />
+              <input type="text" class="description" placeholder="description" />
+              <input type="submit" class="post_it" value="post" />
+              <p class="userName"></p>
+            </form>
+            <!-- The comment form-->
+            <form
+              class="commentForm"
+              action="createComment(event)"
+              method="postForm"
+            >
+              <input type="text" class="description" placeholder="comment" />
+              <input type="submit" class="post_it" value="comment" />
+              <p class="userName"></p>
+            </form>
+          </div>
+          <div>
+            <ul class="posts_box"></ul>
+          </div>
       </main>
+        <footer>
+          Jonny and Neil Inc
+        </footer>
 
   </body>
 </html>

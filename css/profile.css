@@ -1,3 +1,31 @@
 body {
   background-color: #8080ff;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+
+}
+
+nav {
+  /* display: flex; */
+  justify-content: flex-end;
+  padding-bottom: 30px;
+  display: flex;
+}
+
+#home {
+  margin-right: 20px;
+}
+
+.user_profile_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+#user {
+  /* margin-left: 50px; */
+}
+
+img {
+  /* float: left; */
 }
