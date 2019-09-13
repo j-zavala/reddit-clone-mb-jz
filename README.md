@@ -5,6 +5,8 @@ A loosely-based-off-of-reddit clone
 BRIEF DESCRIPTION:
 This project is a rough clone of reddit, being loosely based on it.
 
+https://www.figma.com/file/OxapW3jgKja98Yu5qjT5ei/Food-It-Website?node-id=0%3A1
+
 Technologies Used
 Link and Resources
 • Reddit.com
