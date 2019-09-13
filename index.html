@@ -100,8 +100,12 @@
           <p class="userName"></p>
         </form>
         <form class="commentForm" method="postForm">
-          <input type="text" class="description" placeholder="comment" />
-          <button type="submit" class="submit input postIt commentButton">
+          <input type="text" class="descriptionComment" placeholder="comment" />
+          <button
+            type="submit"
+            class="submit input postIt commentButton"
+            onclick="commentCreator(event)"
+          >
             Comment
           </button>
           <p class="userName"></p>
@@ -110,6 +114,13 @@
       <div class="postsSection">
         <ul class="postsBox"></ul>
       </div>
+      <button
+        type="submit"
+        class="submit input postIt commentButton"
+        onclick="listAllPosts(event)"
+      >
+        List all posts
+      </button>
     </main>
 
     <footer>Johnny and Neil Inc</footer>

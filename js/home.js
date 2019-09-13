@@ -99,6 +99,21 @@ function updateDom() {
       console.log(err);
     });
 }
+
+function showAllPosts(res) {
+  const list = document.querySelector(".postsBox");
+  for (let i = 0; i < res.length; i++) {
+    const item = document.createElement("li");
+    const title = document.createElement("h3");
+    const description = document.createElement("p");
+    item.appendChild(title);
+    item.appendChild(description);
+    title.innerText = res[i].title;
+    description.innerText = res[i].description;
+    list.appendChild(item);
+  }
+}
+
 //Allow user to post after login
 function postCreator() {
   event.preventDefault();
@@ -121,6 +136,52 @@ function postCreator() {
     .then(res => {
       console.log(res);
       updateDom(res);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+
+function commentCreator(event) {
+  event.preventDefault();
+  const comment = document.querySelector(".descriptionComment");
+  fetch("http://thesi.generalassemb.ly:8080/comment/3", {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("user"),
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      text: comment.value
+    })
+  })
+    .then(res => {
+      return res.json();
+    })
+    .then(res => {
+      console.log("inside commentCreator");
+
+      console.log(res);
+      updatePost(res);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+
+function listAllPosts(event) {
+  event.preventDefault();
+  fetch("http://thesi.generalassemb.ly:8080/post/list", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+    .then(res => {
+      return res.json();
+    })
+    .then(res => {
+      showAllPosts(res);
     })
     .catch(err => {
       console.log(err);
