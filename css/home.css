@@ -251,3 +251,7 @@ button.postIt {
   display: flex;
   align-items: center;
 }
+
+.postsSection {
+  width: 100%;
+}

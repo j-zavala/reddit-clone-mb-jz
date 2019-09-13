@@ -83,7 +83,7 @@ function updateDom() {
     })
     .then(res => {
       console.log(res);
-      const list = document.querySelector(".posts");
+      const list = document.querySelector(".postsBox");
       for (let i = 0; i < res.length; i++) {
         const item = document.createElement("li");
         const title = document.createElement("h3");
